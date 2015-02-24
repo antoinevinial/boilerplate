@@ -1,0 +1,335 @@
+/*
+  960 Grid System ~ Core CSS.
+  Learn more ~ http://960.gs/
+
+  Licensed under GPL and MIT.
+*/
+
+/*
+  Forces backgrounds to span full width,
+  even if there is horizontal scrolling.
+  Increase this if your layout is wider.
+
+  Note: IE6 works fine without this fix.
+*/
+
+body {
+  min-width: 980px;
+}
+
+/* `Container
+----------------------------------------------------------------------------------------------------*/
+.row {
+  //@include pie-clearfix;
+  @include position;
+  margin-left: auto;
+  margin-right: auto;
+  width: 940px;
+  .row{
+    width:auto;
+  }
+
+  &.row-fullwidth {
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+}
+
+/* `Grid >> Global
+----------------------------------------------------------------------------------------------------*/
+.cell,
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6,
+.cell-7,
+.cell-8,
+.cell-9,
+.cell-10,
+.cell-11,
+.cell-12 {
+  display: inline;
+  float: left;
+  margin-left: 20px;
+  min-height:1px;
+}
+
+.push-1, .pull-1,
+.push-2, .pull-2,
+.push-3, .pull-3,
+.push-4, .pull-4,
+.push-5, .pull-5,
+.push-6, .pull-6,
+.push-7, .pull-7,
+.push-8, .pull-8,
+.push-9, .pull-9,
+.push-10, .pull-10,
+.push-11, .pull-11 {
+  position: relative;
+}
+
+.row [class*="cell"]:first-child, .cell-first{margin-left:0;}
+
+/* `Grid >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.cell-1 {
+  width: 60px;
+}
+
+.cell-2 {
+  width: 140px;
+}
+
+.cell-3 {
+  width: 220px;
+}
+
+.cell-4 {
+  width: 300px;
+}
+
+.cell-5 {
+  width: 380px;
+}
+
+.cell-6 {
+  width: 460px;
+}
+
+.cell-7 {
+  width: 540px;
+}
+
+.cell-8 {
+  width: 620px;
+}
+
+.cell-9 {
+  width: 700px;
+}
+
+.cell-10 {
+  width: 780px;
+}
+
+.cell-11 {
+  width: 860px;
+}
+
+.cell-12 {
+  width: 940px;
+}
+
+.cell-50-percent {
+  margin:0; width:50%;
+}
+
+/* `Prefix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+.prepend-1-4 {
+  padding-left: 20px;
+}
+
+.prepend-1 {
+  padding-left: 80px;
+}
+
+.prepend-2 {
+  padding-left: 160px;
+}
+
+.prepend-3 {
+  padding-left: 240px;
+}
+
+.prepend-4 {
+  padding-left: 320px;
+}
+
+.prepend-5 {
+  padding-left: 400px;
+}
+
+.prepend-6 {
+  padding-left: 480px;
+}
+
+.prepend-7 {
+  padding-left: 560px;
+}
+
+.prepend-8 {
+  padding-left: 640px;
+}
+
+.prepend-9 {
+  padding-left: 720px;
+}
+
+.prepend-10 {
+  padding-left: 800px;
+}
+
+.prepend-11 {
+  padding-left: 880px;
+}
+
+.prepend-g {
+  padding-left:20px;
+}
+
+/* `Suffix Extra Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.append-1 {
+  padding-right: 80px;
+}
+
+.append-2 {
+  padding-right: 160px;
+}
+
+.append-3 {
+  padding-right: 240px;
+}
+
+.append-4 {
+  padding-right: 320px;
+}
+
+.append-5 {
+  padding-right: 400px;
+}
+
+.append-6 {
+  padding-right: 480px;
+}
+
+.append-7 {
+  padding-right: 560px;
+}
+
+.append-8 {
+  padding-right: 640px;
+}
+
+.append-9 {
+  padding-right: 720px;
+}
+
+.append-10 {
+  padding-right: 800px;
+}
+
+.append-11 {
+  padding-right: 880px;
+}
+
+/* `Push Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.push-1 {
+  left: 80px;
+}
+
+.push-2 {
+  left: 160px;
+}
+
+.push-3 {
+  left: 240px;
+}
+
+.push-4 {
+  left: 320px;
+}
+
+.push-5 {
+  left: 400px;
+}
+
+.push-6 {
+  left: 480px;
+}
+
+.push-7 {
+  left: 560px;
+}
+
+.push-8 {
+  left: 640px;
+}
+
+.push-9 {
+  left: 720px;
+}
+
+.push-10 {
+  left: 800px;
+}
+
+.push-11 {
+  left: 880px;
+}
+
+/* `Pull Space >> 12 Columns
+----------------------------------------------------------------------------------------------------*/
+
+.pull-1 {
+  left: -80px;
+}
+
+.pull-2 {
+  left: -160px;
+}
+
+.pull-3 {
+  left: -240px;
+}
+
+.pull-4 {
+  left: -320px;
+}
+
+.pull-5 {
+  left: -400px;
+}
+
+.pull-6 {
+  left: -480px;
+}
+
+.pull-7 {
+  left: -560px;
+}
+
+.pull-8 {
+  left: -640px;
+}
+
+.pull-9 {
+  left: -720px;
+}
+
+.pull-10 {
+  left: -800px;
+}
+
+.pull-11 {
+  left: -880px;
+}
+
+
+/* Trailer/Leader
+----------------------------------------------------------------------------------------------------*/
+// .trailer-1{@include trailer(1)}
+// .trailer-2{@include trailer(2)}
+
+// .leader-1{@include leader(1)}
+// .leader-1{@include leader(2)}
+
+.w50{width:50%;}
+.w50 img{max-width:100%;}
