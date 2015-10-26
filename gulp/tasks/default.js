@@ -11,7 +11,6 @@ gulp.task('default', function() {
     console.log(title('Tasks'));
     console.log(m('default'), g('...........'),  'Documentation');
     console.log(m('browser-sync'), g('......'), 'Start the local server');
-    console.log(m('clean'), g('.............'), 'Clean the dist folder');
     console.log(m('imagemin'), g('..........'), 'Image optimization');
     console.log(m('uglify'), g('............'), 'Javascript optimization');
     console.log(m('watch'), g('.............'), 'Recompile files after a file changing');

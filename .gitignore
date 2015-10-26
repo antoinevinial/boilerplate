@@ -1,3 +1,2 @@
 .DS_Store
-/resources/gulp/node_modules
-/assets
+/gulp/node_modules

@@ -1,5 +1,5 @@
 var paths = {
-    base: '../../assets/',
+    base: '../',
     scripts: 'js/',
     images: 'images/',
     templates: 'templates/',
