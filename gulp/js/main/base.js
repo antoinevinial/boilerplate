@@ -7,4 +7,4 @@ var moduleExemple = require('./modules/module.js');
         moduleExemple();
     });
 
-})(jQuery, oo, window);
+})(jQuery, window);
