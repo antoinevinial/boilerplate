@@ -5,8 +5,7 @@ var paths = {
     templates: 'templates/',
     css: 'css/',
     maps: 'maps',
-    dist: '../../assets/'
-    // dist: '../../public/layouts/frontoffice/js/'
+    dist: '../'
 }
 
 module.exports = paths;
