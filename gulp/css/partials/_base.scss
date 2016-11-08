@@ -1,10 +1,19 @@
 // Import all the SCSS files.
 
+@import "core/reset";
 @import "core/variables";
+@import "core/media-queries";
+@import "core/extends";
+@import "core/functions";
+@import "core/helpers";
+@import "core/transitions";
+@import "core/typography";
+
+@import "layout/grid";
+@import "layout/header";
+@import "layout/templates";
 
 @import "ui/reset";
 @import "ui/box";
-
-@import "layout/header";
 
 

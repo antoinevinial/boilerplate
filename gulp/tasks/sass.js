@@ -3,22 +3,22 @@ var sass         = require('gulp-sass');
 var sourcemaps   = require('gulp-sourcemaps');
 var postcss      = require('gulp-postcss');
 var autoprefixer = require('autoprefixer-core');
-var notify       = require("gulp-notify");
+var notify       = require('gulp-notify');
+var plumber      = require('gulp-plumber');
 var paths        = require('../config.js');
 
-var errorHandler = function(err){
-    return notify().write('Sass error : ' + err);
-}
-
-gulp.task('sass', function () {
+gulp.task('sass', function() {
     return gulp.src(paths.css + '**/*.scss')
+        .pipe(plumber())
         .pipe(sourcemaps.init())
-        .pipe(sass({
-            errLogToConsole: false,
-            onError: notify.onError(function (error) {
-                return "Sass: " + error.message;
-            })
-        }))
-        .pipe(postcss([ autoprefixer({ browsers: ['last 2 version'] }) ])) //configure
+        .pipe(sass.sync().on('error', sass.logError))
+        .pipe(postcss([ autoprefixer({
+            browsers: [
+                'ie >= 9',
+                'Chrome >= 31',
+                'Safari >= 7',
+                'ff >= 38'
+            ]
+        }) ]))
         .pipe(gulp.dest(paths.dist + paths.css));
 });
