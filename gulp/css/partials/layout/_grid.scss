@@ -1,0 +1,159 @@
+// Grid for the project.
+
+$cols: 12;
+$gutterExtern: 85px;
+$gutter: 20px;
+$width: 1380px;
+
+$gutterTablet: 40px;
+$gutterMobile: 20px;
+
+.grid {
+    @extend %clearfix;
+    max-width: $width;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.row {
+    margin-left: -$gutter;
+    margin-right: -$gutter;
+
+    &:after {
+        @extend %clearfix;
+    }
+}
+
+[class*="cell-"] {
+    min-height: 1px;
+    float: left;
+    padding-left: $gutter;
+    padding-right: $gutter;
+}
+
+@for $i from 1 through $cols {
+    .cell-#{$i} {
+        width: (100% / $cols) * $i;
+    }
+}
+
+@for $i from 1 through $cols {
+    .prepend-#{$i} {
+        margin-left: (100% / $cols) * $i;
+    }
+}
+
+@for $i from 1 through $cols {
+    .append-#{$i} {
+        margin-right: (100% / $cols) * $i;
+    }
+}
+
+@include tablet {
+    .grid {
+        padding: 0 $gutterTablet;
+    }
+
+    .row {
+        margin: 0;
+    }
+
+    @for $i from 1 through $cols {
+        .cell-#{$i} {
+            float: none;
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    @for $i from 1 through $cols {
+        .prepend-#{$i} {
+            margin-left: 0;
+        }
+    }
+
+    @for $i from 1 through $cols {
+        .append-#{$i} {
+            margin-right: 0;
+        }
+    }
+
+    [class*="cell-"] + [class*="cell-"] {
+        margin-top: pxToRem(50px);
+    }
+
+    .prepend-0--t {
+        margin-left: 0;
+    }
+}
+
+@include mobile {
+    .grid {
+        padding: 0 $gutterMobile;
+    }
+}
+
+
+// Grid dev
+
+.dev-grid {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+    pointer-events: none;
+
+    .grid {
+        height: 100%;
+    }
+
+    .row {
+        height: 100%;
+    }
+
+    [class*="cell-"] {
+        position: relative;
+        height: 100%;
+
+        &:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: $gutter;
+            right: $gutter;
+            display: block;
+            height: 100%;
+            background-color: rgba(74,255,255,0.3);
+        }
+    }
+
+    &__button {
+        position: fixed;
+        z-index: 100;
+        bottom: 25px;
+        left: 25px;
+        display: block;
+        padding: 7px 12px;
+        font-size: 18px;
+        color: $color-white;
+        text-transform: uppercase;
+        background-color: $color-black;
+        border: none;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    &.is-hidden {
+        display: none;
+    }
+
+    @include tablet {
+        display: none;
+
+        &__button {
+            display: none;
+        }
+    }
+}

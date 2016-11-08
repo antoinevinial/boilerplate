@@ -5,7 +5,7 @@ var paths = {
     templates: 'templates/',
     css: 'css/',
     maps: 'maps',
-    dist: '../'
+    dist: '../dist/'
 }
 
 module.exports = paths;
