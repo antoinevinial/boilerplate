@@ -1,9 +1,9 @@
-var gulp       = require('gulp');
-var browserify = require('browserify');
-var babelify   = require('babelify');
-var source     = require('vinyl-source-stream');
-var paths      = require('../config.js');
-var notify     = require("gulp-notify");
+const gulp       = require('gulp');
+const browserify = require('browserify');
+const babelify   = require('babelify');
+const source     = require('vinyl-source-stream');
+const paths      = require('../config.js');
+const notify     = require("gulp-notify");
 
 gulp.task('browserify', function() {
     return browserify('./' + paths.scripts + 'main/base.js')

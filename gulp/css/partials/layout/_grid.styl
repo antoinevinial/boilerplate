@@ -1,0 +1,72 @@
+// Grid for the project.
+$cols = 12
+$gutterExtern = 40px
+$gutter = 20px
+$width = 1280px
+
+.grid
+	max-width pxToRem($width)
+	margin 0 auto
+	padding 0 pxToRem($gutterExtern)
+
+.row
+	display flex
+	flex-flow row wrap
+	margin-left -($gutter)
+	margin-right -($gutter)
+	
+[class*="cell-"]
+	padding-left pxToRem($gutter)
+	padding-right pxToRem($gutter)
+	
+for col in 1 .. $cols
+	.cell-{col}
+		width (100% / $cols) * col
+		
+for col in 1 .. $cols
+	.prepend-{col}
+		margin-left (100% / $cols) * col
+		
+for col in 1 .. $cols
+	.append-{col}
+		margin-right (100% / $cols) * col
+	
+.dev-grid
+	position fixed
+	top 0
+	left 0
+	width 100%
+	height 100%
+	z-index 1000
+	
+	.grid
+	.row
+		height 100%
+	
+	[class*="cell-"]
+		position relative
+		height 100%
+		
+		&:before
+			content ""
+			position absolute
+			top 0
+			right pxToRem($gutter)
+			bottom 0
+			left pxToRem($gutter)
+			background-color rgba(74,255,255,0.3)
+			
+	&__btn
+		@extend .antialiased
+		position fixed
+		right pxToRem($gutter)
+		bottom pxToRem($gutter)
+		padding pxToRem(7px) pxToRem(15px)
+		font-size pxToRem(18px)
+		color $color-white
+		background-color $color-brand
+		border-radius pxToRem(5px)
+		z-index 1001
+			
+	&.is-hidden
+		display none

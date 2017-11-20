@@ -1,24 +1,24 @@
-var grid = {
+const grid = {
 
-    ui: {},
+	ui: {},
 
-    init: function init() {
-        this.bindUI();
-        this.bindEvents();
-    },
+	init() {
+		this.bindUI();
+		this.bindEvents();
+	},
 
-    bindUI: function bindUI() {
-        this.ui.$grid = $('.js-dev-grid');
-        this.ui.$btn  = $('.js-dev-grid-btn');
-    },
+	bindUI() {
+		this.ui.grid = document.querySelector('.js-dev-grid');
+		this.ui.btn  = document.querySelector('.js-dev-grid-btn');
+	},
 
-    bindEvents: function bindEvents() {
-        this.ui.$btn.on('click', $.proxy(this.toggleGrid, this));
-    },
+	bindEvents() {
+		this.ui.btn.addEventListener('click', this.toggleGrid.bind(this));
+	},
 
-    toggleGrid: function toggleGrid() {
-        this.ui.$grid.toggleClass('is-hidden');
-    }
+	toggleGrid() {
+		this.ui.grid.classList.toggle('is-hidden');
+	}
 
 };
 

@@ -1,10 +1,10 @@
-var gulp  = require('gulp');
-var utils = require('gulp-util');
+const gulp  = require('gulp');
+const utils = require('gulp-util');
 
 gulp.task('default', function() {
-    var m     = utils.colors.magenta;
-    var g     = utils.colors.grey;
-    var title = utils.colors.bgYellow;
+    const m     = utils.colors.magenta;
+    const g     = utils.colors.grey;
+    const title = utils.colors.bgYellow;
 
     console.log(title('Configuration'));
     console.log('Before starting to code, please configure your paths in config.js');

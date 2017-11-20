@@ -1,5 +1,5 @@
-var gulp   = require('gulp');
-var uglify = require('gulp-uglify');
-var paths  = require('../config.js');
+const gulp   = require('gulp');
+const uglify = require('gulp-uglify');
+const paths  = require('../config.js');
 
 gulp.task('deploy', ['uglify', 'cssmin']);
