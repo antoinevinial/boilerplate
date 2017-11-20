@@ -26,7 +26,7 @@
 
 			<h2>Important</h2>
 			<p>If you want to use the live reaload feature, you have to change Browsersync proxy URL inside <a href="#">/gulp/tasks/browser-syncs.js</a></p>
-			<p>Feel free to change the grid settings inside <a href="#">/gulp/css/partials/layout/_grid</a> to match your designer PSD layout.</p>
+			<p>Feel free to change the grid settings inside <a href="#">/gulp/css/partials/layout/grid</a> to match your designer PSD layout.</p>
 		</div>
 
 		<!-- Dev grid -->
