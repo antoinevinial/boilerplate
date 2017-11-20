@@ -19,14 +19,14 @@
 
 			<h2>Installation</h2>
 			<ol>
-				<li>1. Go to <a href="#">/gulp</a> folder and launch <em>npm install</em></li>
+				<li>1. Go to <strong>/gulp</strong> folder and launch <em>npm install</em></li>
 				<li>2. When install is done, launch <em>gulp watch</em> to start coding</li>
 				<li>3. Once you're done, launch <em>gulp deploy</em> to compress all your files before pushing to production</li>
 			</ol>
 
 			<h2>Important</h2>
-			<p>If you want to use the live reaload feature, you have to change Browsersync proxy URL inside <a href="#">/gulp/tasks/browser-syncs.js</a></p>
-			<p>Feel free to change the grid settings inside <a href="#">/gulp/css/partials/layout/grid</a> to match your designer PSD layout.</p>
+			<p>If you want to use the live reaload feature, you have to change Browsersync proxy URL inside <strong>/gulp/tasks/browser-syncs.js</strong></p>
+			<p>Feel free to change the grid settings inside <strong>/gulp/css/partials/layout/grid</strong> to match your designer PSD layout.</p>
 		</div>
 
 		<!-- Dev grid -->
